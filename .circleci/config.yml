@@ -1,0 +1,54 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: node:10.15.2
+
+    working_directory: ~/repo
+
+    branches:
+      only:
+        - master
+        - dev
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package-lock.json" }}
+            - v1-dependencies-
+
+      - run:
+          name: Install dependencies
+          command: npm i
+
+      - run:
+          name: Build
+          command: npm run build
+
+      - run:
+          name: Check dist
+          command: ls -la dist
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package-lock.json" }}
+
+      - run:
+          name: Install Firebase-tools
+          command: npm install -g firebase-tools
+
+      - run:
+          name: Deploy to prd
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              firebase deploy --project "$FIREBASE_ID_1" --token "$FIREBASE_TOKEN"
+            fi
+      - run:
+          name: Deploy to dev
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "dev" ]; then
+              firebase deploy --project "$FIREBASE_ID_2" --token "$FIREBASE_TOKEN"
+            fi
