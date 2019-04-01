@@ -74,10 +74,16 @@ CircleCIを使って自動でビルドを行い，デプロイの時間短縮等
 src
 ├── assets        外部のCSS及び画像を入れるとこ
 ├── components    コンポーネント
+├── helpers       storeを更新しない処理を書いたファイルを入れるディレクトリ
 ├── layouts       レイアウト
 ├── pages         ページ
 ├── plugins       vuetifyなどのやつ置かれるとこ
-└── store         storeのやつ置くとこ
+└── stores        store関係のやつ置くとこ
+    ├── actions   actionをまとめておく　中にあるindex.jsに関連ファイルを書き出して一括でexportする
+    ├── getters   getterをまとめておく　中にあるindex.jsに関連ファイルを書き出して一括でexportする
+    ├── mutations mutationをまとめておく　中にあるindex.jsに関連ファイルを書き出して一括でexportする
+    ├── states    stateをまとめておく　中にあるindex.jsに関連ファイルを書き出して一括でexportする
+    └── index.js  上記のexport全てをまとめたファイル
 ```
 
 `pages`
