@@ -78,12 +78,12 @@ src
 ├── layouts       レイアウト
 ├── pages         ページ
 ├── plugins       vuetifyなどのやつ置かれるとこ
-└── stores        store関係のやつ置くとこ
+└── vuex          vuex関係のやつ置くとこ
     ├── actions   actionをまとめておく　中にあるindex.jsに関連ファイルを書き出して一括でexportする
     ├── getters   getterをまとめておく　中にあるindex.jsに関連ファイルを書き出して一括でexportする
     ├── mutations mutationをまとめておく　中にあるindex.jsに関連ファイルを書き出して一括でexportする
     ├── states    stateをまとめておく　中にあるindex.jsに関連ファイルを書き出して一括でexportする
-    └── index.js  上記のexport全てをまとめたファイル
+    └── store.js  上記のexport全てをまとめたファイル
 ```
 
 `pages`
