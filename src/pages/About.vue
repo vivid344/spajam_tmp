@@ -1,14 +1,15 @@
 <template>
   <div class="about">
-    This is About Page
+    {{this.value}}
   </div>
 </template>
 
 <script>
-
-    export default {
-        name: 'about',
-        components: {
-        }
-    }
+  import { mapGetters } from 'vuex'
+  export default {
+    name: 'about',
+    computed: {
+      ...mapGetters(['value']),
+    },
+  }
 </script>

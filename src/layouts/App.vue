@@ -20,10 +20,3 @@
     </v-content>
   </v-app>
 </template>
-
-<!--
-layoutでどんな感じでrouter-viewを表示するかを決める
--->
-
-<style>
-</style>
