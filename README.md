@@ -55,6 +55,11 @@ https://qiita.com/macoshita/items/bf295a1e0f5fefff3d8e
 - vuetify       割と特殊な書き方多め
 
 ## 開発を行うにあたって
+### コミットメッセージ
+このリポジトリではAngularJSのコミットスタイルを採用します（コミットメッセージにプレフィックスをつけるやつ）
+詳しくは以下を御覧ください．  
+https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#type
+
 ### CI/CD
 CircleCIを使って自動でビルドを行い，デプロイの時間短縮等につなげましょう．
 
@@ -64,7 +69,7 @@ CircleCIを使って自動でビルドを行い，デプロイの時間短縮等
 
 の２つを用意します．
 
-勝手に用意しておくので，「GitHubにpushすれば勝手にデプロイされるんだぁ〜」って思っておけばよきです．
+勝手に用意しておくので，「GitHubにpushすれば勝手にデプロイされるんだぁ〜って思っておけばよきです．
 
 ### ディレクトリ構造
 今回は以下のディレクトリ構造で行いたいと思います．
@@ -129,10 +134,18 @@ componentsの配下などのディレクトは`PascalCase(ex.ImageList)`でフ�
 ハッカソンなのでしません
 
 ## サンプルプロジェクトの実行
-以上のことを模倣したProjectを置いておきます．
+以上のことを模倣したProjectがこのリポジトリとなっております．
+```
+$ npm i
+$ npm run serve 
+```
+で実行してみてください．
 
-TBA...
+本プロジェクトはmaster，devどちらにpushしても  
+https://spajam2019-tmp.firebaseapp.com  
+にビルドされます．
 
+ご確認したい方はどうぞお使いください．
 
 ## コマンド一覧
 ### 初期インストール
