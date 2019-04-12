@@ -1,7 +1,11 @@
-import { INPUT } from "../actions/input";
+import { REQUEST_INPUT, SUCCESS_INPUT, FAILED_INPUT } from "../actions/input";
 
 export const input = {
-  [INPUT] (state, keyword) {
+  [REQUEST_INPUT] () {
+  },
+  [SUCCESS_INPUT] (state, keyword) {
     state.input.value = keyword
+  },
+  [FAILED_INPUT] () {
   },
 };
