@@ -1,6 +1,10 @@
 <template>
   <div class="about">
-    {{this.value}}
+    先程入力した言葉↓
+    <h1>{{this.value}}</h1>
+
+    今まで入力された言葉↓
+    <h2>{{this.total}}</h2>
   </div>
 </template>
 
@@ -9,7 +13,7 @@
   export default {
     name: 'about',
     computed: {
-      ...mapGetters(['value']),
+      ...mapGetters(['value', 'total']),
     },
   }
 </script>

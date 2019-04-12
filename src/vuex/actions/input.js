@@ -12,9 +12,10 @@ export const input = {
       userCollection.get().then((querySnapshot) => {
         let name = '';
         querySnapshot.forEach(user => {
-          name += user.data().name;
+          name += ' '+ user.data().name;
         });
-        commit(SUCCESS_INPUT, name)
+
+        commit(SUCCESS_INPUT, {name, keyword})
       }).catch(() => {
         commit(FAILED_INPUT)
       });
