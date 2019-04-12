@@ -11,8 +11,7 @@
 <script>
   import { mapActions } from 'vuex'
   import { changeEm } from "../helpers/changeEm";
-
-  import { INPUT } from '../vuex/actions/input'
+  import { REQUEST_INPUT } from '../vuex/actions/input'
   export default {
     name: 'input',
     data() {
@@ -22,11 +21,11 @@
     },
     methods: {
       ...mapActions([
-        INPUT
+        REQUEST_INPUT
       ]),
       input(){
         const tmp = changeEm(this.value);
-        this.INPUT(tmp)
+        this.REQUEST_INPUT(tmp)
       }
     }
   }
