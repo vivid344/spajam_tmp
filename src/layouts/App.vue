@@ -20,3 +20,7 @@
     </v-content>
   </v-app>
 </template>
+
+<style>
+
+</style>
