@@ -41,6 +41,8 @@ https://qiita.com/macoshita/items/bf295a1e0f5fefff3d8e
     - autofixとかしてくれるからcommitする前とかに行うと良き
 - vuetify（vue-cliから導入）
     - マテリアルUIを手軽に作れるライブラリ
+- firebase
+    - firestoreと接続するために使うよ
 ### 関連技術
 - PWA
 - SPA
@@ -53,6 +55,7 @@ https://qiita.com/macoshita/items/bf295a1e0f5fefff3d8e
 
 ## 事前に勉強すると幸せになれること
 - vuetify       割と特殊な書き方多め
+- firebase      firestoreと接続するために用いる．リアルタイムデータベースの良さを出すために非同期でバックグラウンドでやってくれる方法を学んだほうが良き．
 
 ## 開発を行うにあたって
 ### コミットメッセージ
